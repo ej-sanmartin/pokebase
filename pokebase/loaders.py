@@ -554,7 +554,9 @@ def pokemon_species(id_or_name, **kwargs):
 
     def get_evolution_chain(val):
         params = val["url"].split("/")[-3:-1]
+        print("get_evolution_chain LOG: " + str(params))
         params[1] = int(params[1])
+        print("get_evolution_chain LOG: " + str(params))
         return params
 
     return APIResource(
